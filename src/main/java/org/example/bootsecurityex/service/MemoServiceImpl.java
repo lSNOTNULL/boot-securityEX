@@ -23,4 +23,26 @@ public class MemoServiceImpl implements MemoService {
         memoMapper.insert(memo);
     }
 
+    @Override
+    public void deleteAll() {
+        memoMapper.deleteAll();
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        memoMapper.deleteById(id);
+    }
+
+    @Override
+    public Memo findById(Long id) {
+        return memoMapper.findById(id);
+    }
+
+    @Override
+    public void update(Memo newMemo) {
+        memoMapper.update(newMemo);
+
+    }
+
+
 }
